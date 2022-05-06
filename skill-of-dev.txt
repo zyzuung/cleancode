@@ -1,0 +1,152 @@
+/*/ add event and stop event in element don't need
+$('#openDropdown').click(function (event) {
+    event.stopPropagation();
+});
+
+/*/chat m.facebook
+setInterval( () => {
+    let input = document.querySelector('#composerInput')
+let buttonSend = document.querySelectorAll('[value="G?i"]')[0]
+let buttonLike = document.querySelectorAll('[value="Tr? l?i"]')[0]
+input.value = 'test ne'
+buttonSend.style.display = 'block'
+buttonSend.disabled = false
+buttonLike.style.display = 'none'
+buttonSend.click()
+},1000)
+
+function spamChat(solan, noidung){
+    let input = document.querySelector('#composerInput')
+    let buttonSend = document.querySelectorAll('[value="G?i"]')[0]
+    let buttonLike = document.querySelectorAll('[value="Tr? l?i"]')[0]
+    for(let i = 1; i<= solan;i++){
+        input.value = i + noidung
+        buttonSend.style.display = 'block'
+        buttonSend.disabled = false
+        buttonLike.style.display = 'none'
+        buttonSend.click()
+    }
+}
+
+$(window).click(function () {
+   $('#showContentType').addClass('hidden');
+});
+
+/*/ icon angular material
+https://material.io/resources/icons/?icon=edit&style=baseline
+add animation css
+
+/*/ custom event js
+const emitEvent = new CustomEvent('disabledButtonExport', {
+                        detail: false
+                      });
+                      document.body.dispatchEvent(emitEvent);
+
+document.body.addEventListener('onRecieveBroadcast', (data) => {
+      _this.isLoading = data && data['detail'] && data['detail'].isLoading || false;
+      this.initChooseDate();
+    }, false);
+
+/*/ overlay hidden background focus menu
+https://stackblitz.com/edit/angular-ykmaff?file=src%2Fapp%2Fapp.component.html
+
+/*/ skill in angular js
+- RestfullAPI
+- Ajax
+- Jquery
+- Promises
+- Scope trong JS ( Global scope, local scope, function scope ... ) 
+- var let const
+- Binding two way
+
+/*/ mo hinh lam viec cong ty
+Scrum ( doing)
+Waterfall
+
+/*/learning everything
+how to learning everything* What/When/Where/How
+
+/*/fix bug
+Rootcause
+Solution
+Impact
+
+/*/ learn skill dev
+S.O.L.I.D
+
+/*/ resource css
+https://evondev.com/thanh-thao-ky-nang-css/?fbclid=IwAR2nkmOzEjB7Po5bnMJATQPbb9DwLKkF5H1rIIud1pM2jek3Tzggur1eWz8
+
+/*/ horver css
+https://ianlunn.github.io/Hover/?fbclid=IwAR0q8b_y0oK8oPiJX1HxKR__U_wwZhcW2j4kBkjI3eJm15CnWZSJodF2asE
+
+/*/ boder css
+http://minhpcc.gq/home/ViewCourse?ID=9&fbclid=IwAR3Dt5o_jL3ssKQ4mOxQYXw_CTHKJKOfLCeXPbQGSLlYM_fiF2jv-AoVpHs
+
+/*/ reduce change filter and map
+https://anonystick.com/blog-developer/javascript-reduce-nang-cao-arrayprototypereduce-tutorial-2019041273772614
+
+1//input
+var arr = [
+    {key: "vanbanhanhchinh", text: "Van b?n hành chính", selected: true, itemType: 0},
+    {key: "vanbanlapquy", text: "Van b?n l?p quy", selected: true, itemType: 0}
+]
+1//out put
+=> ["vanbanhanhchinh","vanbanlapquy"]
+1// code:
+arr.reduce((acc, cur) => cur.selected === true ? [...acc,cur.key] : acc, [])
+
+2// input
+var team = [
+{name: 'cong phuong', country: 'Viet Nam'},
+{name: 'Ronaldo', country: 'Portugal'},
+{name: 'Quang Hai', country: 'Viet Nam'},
+{name: 'Messi', country: 'Argentina'},
+{name: 'Nani', country: 'Portugal'},
+]
+2// output
+{Viet Nam:[{...},{...}],
+Portugal:[{...},{...},]
+Argentina:[{...}]}
+
+2// code: 
+var ketqua = team.reduce((acc, cur) => {!acc[cur.country] ? acc[cur.country] = [] :''; acc[cur.country].push(cur); return acc},{})
+
+/*/ method array in javascript
+https://viblo.asia/p/cac-phuong-thuc-xu-ly-mang-array-pho-bien-trong-javascript-phan-3-YWOZrQbwKQ0
+
+/*/ extension fb
+https://github.com/dangtinh-dev/extensions/tree/master/block-ads-facebook?fbclid=IwAR0tXpBmvk1imVAuqA3GUNPtasZSvau5M5pBInfpUXqvNLzHSaOOCyBp0po
+
+/*/ handle issue
+issue -> read error -> understand -> search -> solution -> fix
+
+/*/ git
+git clone --recurse-submodules git@bitbucket.org:etonx/eton.wms.operations.git    => clone source
+git branch        => xem nhánh
+git branch <branch>  => t?o branch m?i
+git checkout <branch> => chuyen nhanh 
+git status      => xem tr?ng thái branch
+git add <file>
+git restore <file>
+git commit -m <message>
+git pull       => get code
+git push origin dev_master
+npm start or npm run start
+git pull origin master => pull code t? nhánh master
+git add src/WebApp/Eton.ClientCentral/wwwroot/Content/js/Views/Home/      => add 1 file 
+git commit -m "Ship60 POD"  => "my task"
+Note: 
+git merge Eton_Master_UAT      => tru?c khi làm ph?i merge code t? nhánh master [Eton_Master_UAT](tùy theo môi tr??ng )
+
+/*/ overlay trung tâm
+<div style='position: relative;'>
+	<div style='position: absolute;'>
+	</div>
+</div>
+
+/*/ loop object to html sort not default
+*ngFor="let warehouse of data[area.key] | keyvalue : 0"
+
+/*/ máy anh = css
+https://codepen.io/kassandrasanch/pen/WNxJZyz?utm_source=j2team&utm_medium=url_shortener
