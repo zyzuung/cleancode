@@ -1,9 +1,35 @@
-/*/ add event and stop event in element don't need
-$('#openDropdown').click(function (event) {
+/******************** stop event default ********************/
+<a href="https://www.google.com">Home</a>
+<script type="text/javascript">
+
+$("a").click(function (event) {
+    alert("B?n nh?n vào link r?i");
+    event.preventDefault()
+});
+</script>
+// alert -> stop directional to https://www.google.com
+/******************** stop event default ********************/
+
+
+/******************** stop event default ********************/
+<a onclick="parentEventHandler()">
+    <p href="https://www.google.com">Home</a>
+</a>
+
+<script type="text/javascript">
+function parentEventHandler() {
+    alert("aaa");
+};
+
+$("p").click(function (event) {
+    alert("ppp");
     event.stopPropagation();
 });
+</script>
+// alert 'ppp' -> stop alert 'aaa'
+/******************** stop event default ********************/
 
-/*/chat m.facebook
+/******************** spam chat m.facebook ********************/
 setInterval( () => {
     let input = document.querySelector('#composerInput')
 let buttonSend = document.querySelectorAll('[value="G?i"]')[0]
@@ -27,16 +53,9 @@ function spamChat(solan, noidung){
         buttonSend.click()
     }
 }
+/******************** spam chat m.facebook ********************/
 
-$(window).click(function () {
-   $('#showContentType').addClass('hidden');
-});
-
-/*/ icon angular material
-https://material.io/resources/icons/?icon=edit&style=baseline
-add animation css
-
-/*/ custom event js
+/******************** custom event js ********************/
 const emitEvent = new CustomEvent('disabledButtonExport', {
                         detail: false
                       });
@@ -46,11 +65,9 @@ document.body.addEventListener('onRecieveBroadcast', (data) => {
       _this.isLoading = data && data['detail'] && data['detail'].isLoading || false;
       this.initChooseDate();
     }, false);
+/******************** custom event js ********************/
 
-/*/ overlay hidden background focus menu
-https://stackblitz.com/edit/angular-ykmaff?file=src%2Fapp%2Fapp.component.html
-
-/*/ skill in angular js
+/******************** skil of dev ********************/
 - RestfullAPI
 - Ajax
 - Jquery
@@ -59,33 +76,58 @@ https://stackblitz.com/edit/angular-ykmaff?file=src%2Fapp%2Fapp.component.html
 - var let const
 - Binding two way
 
-/*/ mo hinh lam viec cong ty
-Scrum ( doing)
+// mo hinh lam viec cong ty
+Scrum
 Waterfall
 
-/*/learning everything
+//learning everything
 how to learning everything* What/When/Where/How
 
-/*/fix bug
+//fix bug
 Rootcause
 Solution
 Impact
 
-/*/ learn skill dev
-S.O.L.I.D
+// handle issue
+issue -> read error -> understand -> search -> solution -> fix
 
-/*/ resource css
+S.O.L.I.D
+/******************** skil of dev ********************/
+
+/********************libary, html and css resource ********************/
+//overlay background
+https://stackblitz.com/edit/angular-ykmaff?file=src%2Fapp%2Fapp.component.html
+
+// angular icon material
+https://material.io/resources/icons/?icon=edit&style=baseline
+
+//skill css
 https://evondev.com/thanh-thao-ky-nang-css/?fbclid=IwAR2nkmOzEjB7Po5bnMJATQPbb9DwLKkF5H1rIIud1pM2jek3Tzggur1eWz8
 
-/*/ horver css
+// horver css
 https://ianlunn.github.io/Hover/?fbclid=IwAR0q8b_y0oK8oPiJX1HxKR__U_wwZhcW2j4kBkjI3eJm15CnWZSJodF2asE
 
-/*/ boder css
+// boder css
 http://minhpcc.gq/home/ViewCourse?ID=9&fbclid=IwAR3Dt5o_jL3ssKQ4mOxQYXw_CTHKJKOfLCeXPbQGSLlYM_fiF2jv-AoVpHs
 
-/*/ reduce change filter and map
+// reduce change filter and map
 https://anonystick.com/blog-developer/javascript-reduce-nang-cao-arrayprototypereduce-tutorial-2019041273772614
 
+// máy anh = css
+https://codepen.io/kassandrasanch/pen/WNxJZyz?utm_source=j2team&utm_medium=url_shortener
+
+// overlay trung tâm
+<div style='position: relative;'>
+	<div style='position: absolute;'>
+	</div>
+</div>
+
+// loop object to html sort not default
+*ngFor="let warehouse of data[area.key] | keyvalue : 0"
+
+/******************** libary, html and css resource ********************/
+
+/******************** reduce in js ********************/
 1//input
 var arr = [
     {key: "vanbanhanhchinh", text: "Van b?n hành chính", selected: true, itemType: 0},
@@ -111,17 +153,17 @@ Argentina:[{...}]}
 
 2// code: 
 var ketqua = team.reduce((acc, cur) => {!acc[cur.country] ? acc[cur.country] = [] :''; acc[cur.country].push(cur); return acc},{})
+/******************** reduce in js ********************/
 
-/*/ method array in javascript
+/******************** method with array in js ********************/
 https://viblo.asia/p/cac-phuong-thuc-xu-ly-mang-array-pho-bien-trong-javascript-phan-3-YWOZrQbwKQ0
+/******************** method with array in js ********************/
 
-/*/ extension fb
+/******************** extainsion fb ********************/
 https://github.com/dangtinh-dev/extensions/tree/master/block-ads-facebook?fbclid=IwAR0tXpBmvk1imVAuqA3GUNPtasZSvau5M5pBInfpUXqvNLzHSaOOCyBp0po
+/******************** extainsion fb ********************/
 
-/*/ handle issue
-issue -> read error -> understand -> search -> solution -> fix
-
-/*/ git
+/******************** git ********************/
 git clone --recurse-submodules git@bitbucket.org:etonx/eton.wms.operations.git    => clone source
 git branch        => xem nhánh
 git branch <branch>  => t?o branch m?i
@@ -138,15 +180,4 @@ git add src/WebApp/Eton.ClientCentral/wwwroot/Content/js/Views/Home/      => add
 git commit -m "Ship60 POD"  => "my task"
 Note: 
 git merge Eton_Master_UAT      => tru?c khi làm ph?i merge code t? nhánh master [Eton_Master_UAT](tùy theo môi tr??ng )
-
-/*/ overlay trung tâm
-<div style='position: relative;'>
-	<div style='position: absolute;'>
-	</div>
-</div>
-
-/*/ loop object to html sort not default
-*ngFor="let warehouse of data[area.key] | keyvalue : 0"
-
-/*/ máy anh = css
-https://codepen.io/kassandrasanch/pen/WNxJZyz?utm_source=j2team&utm_medium=url_shortener
+/******************** git ********************/
