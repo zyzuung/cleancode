@@ -16,4 +16,6 @@
 
 ## [8. StayClean](https://github.com/zyzuung/cleancode/tree/master/8.StayClean)
 
+## [9. My resource](https://github.com/zyzuung/cleancode/blob/master/skill-of-dev.txt)
+
 
