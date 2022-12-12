@@ -1,0 +1,12 @@
+function tinhLai (tienBanDau, soNam, laiNam, themTien){
+    let tongTien = tienBanDau
+    let tienTungNam = tienBanDau
+    for(let i = 0; i < soNam; i++){
+        if(i > 0){
+            tienTungNam += themTien
+            tongTien += tienTungNam;
+        }
+        tongTien = tongTien*(1+ laiNam/100)
+        console.log(`tien sau nam thu ${i+1} là ${tongTien} trieu`)
+    }
+}
